@@ -31,6 +31,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
     try {
       //proper use of configuration parameters instead of hard-wired model/file path
       String FilePath= (String) getConfigParameterValue("InputFile");
+      System.out.println("here");
       reader = new BufferedReader(new FileReader(FilePath));
     } catch (FileNotFoundException e) {
       // TODO Auto-generated catch block
@@ -47,7 +48,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
    */
   public void getNext(CAS aCAS) throws IOException, CollectionException {
     // TODO Auto-generated method stub
-
+    System.out.println("here2");
     JCas jcas = null;
     try {
       jcas=aCAS.getJCas();
@@ -65,6 +66,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
       sentencesTag.addToIndexes();
       //id and text are separated during reading collection
     }
+    System.out.println("finish");
 }
   
   /**

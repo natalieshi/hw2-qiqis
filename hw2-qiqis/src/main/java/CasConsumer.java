@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import edu.cmu.deiis.types.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,6 +33,7 @@ public class CasConsumer extends CasConsumer_ImplBase {
 
   public void processCas(CAS arg0) throws ResourceProcessException {
     // TODO Auto-generated method stub
+   
     File f= new File("hw2-qiqis.out");
     
   //read info from sample.out
@@ -40,7 +42,7 @@ public class CasConsumer extends CasConsumer_ImplBase {
     HashSet<String> s=new HashSet<String>(); 
     BufferedReader br=null;
     try {
-      br=new BufferedReader(new FileReader("src/main/resources/data/sample.out"));
+      br=new BufferedReader(new FileReader("src/main/resources/inputData/sample.out"));
       tmpt=br.readLine();
      while(tmpt!=null)
      {
@@ -76,21 +78,23 @@ public class CasConsumer extends CasConsumer_ImplBase {
     //the calculation of F-measure
     int rightnumber=0;//the right number of geneTag
     int totalrecognizenumber = 0;
-    FSIterator<Annotation> it = jcas.getAnnotationIndex(GeneResult.type).iterator();
+    String info=null;
+    FSIterator<Annotation> it = jcas.getAnnotationIndex(finalResult.type).iterator();
     while(it.hasNext())
     {
-      GeneResult gt=(GeneResult) it.next();
-      String info=gt.getId()+"|"+gt.getStartPoint()+" "+gt.getEndPoint()+"|"+gt.getGeneName();
-      try {
+      finalResult gt=(finalResult) it.next();
+      info=gt.getFinalResult();
         totalrecognizenumber++;
-        bw.write(info);
-        bw.newLine();
+        try {
+          bw.write(info);
+          bw.newLine();
+        } catch (IOException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+       
         if(s.contains(info))
           rightnumber++;
-      } catch (IOException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-      }
     }
     try {
       bw.close();
@@ -107,7 +111,7 @@ public class CasConsumer extends CasConsumer_ImplBase {
     System.out.println("precision="+precision);
     System.out.println("recall="+recall);
     System.out.println("F-measure="+F);
-
+    
     
   }
 

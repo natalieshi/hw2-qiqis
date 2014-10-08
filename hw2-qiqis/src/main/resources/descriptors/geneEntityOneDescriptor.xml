@@ -23,7 +23,7 @@
           <type allAnnotatorFeatures="true">sentence</type>
         </inputs>
         <outputs>
-          <type allAnnotatorFeatures="true">GeneResultOne</type>
+          <type allAnnotatorFeatures="true">GeneResult</type>
         </outputs>
         <languagesSupported/>
       </capability>

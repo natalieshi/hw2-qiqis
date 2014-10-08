@@ -206,10 +206,7 @@ under the License.
           <layout>default</layout>
           <snapshotPolicy>always</snapshotPolicy>
         </repository>
-        <repository> 
-          <id>oaqa</id> 
-           <url>https://mu.lti.cs.cmu.edu/nexus/content/groups/course</url>
-         </repository> 
+        
       </repositories>
     </profile>
     -->

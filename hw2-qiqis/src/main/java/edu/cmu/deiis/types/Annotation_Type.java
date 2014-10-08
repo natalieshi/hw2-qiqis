@@ -1,6 +1,7 @@
+package edu.cmu.deiis.types;
 
 /* First created by JCasGen Wed Sep 11 13:44:28 EDT 2013 */
-package edu.cmu.deiis.types;
+
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -13,7 +14,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Sat Oct 04 21:35:01 EDT 2014
+ * Updated by JCasGen Tue Oct 07 19:49:18 EDT 2014
  * @generated */
 public class Annotation_Type extends org.apache.uima.jcas.tcas.Annotation_Type {
   /** @generated */

@@ -10,12 +10,19 @@
     <vendor/>
     <configurationParameters/>
     <configurationParameterSettings/>
-    <typeSystemDescription/>
+    <typeSystemDescription>
+      <imports>
+        <import name="descriptors.geneEntity_types"/>
+      </imports>
+    </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
+        <inputs>
+          <type allAnnotatorFeatures="true">GeneResult</type>
+        <type allAnnotatorFeatures="true">finalResult</type>
+        </inputs>
         <outputs/>
         <languagesSupported/>
       </capability>

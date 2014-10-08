@@ -124,5 +124,17 @@
         </featureDescription>
       </features>
     </typeDescription>
+  <typeDescription>
+      <name>finalResult</name>
+      <description>the finalResult of the system</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>finalResult</name>
+          <description>the finalResult info</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
   </types>
 </typeSystemDescription>

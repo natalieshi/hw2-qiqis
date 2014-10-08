@@ -22,7 +22,7 @@ public class GeneEntityOne extends JCasAnnotator_ImplBase {
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
     int startpoint,endpoint;
-    
+    //System.out.println("here3");
     FSIterator<Annotation> it = aJCas.getAnnotationIndex(sentence.type).iterator();
     File f=new File("src/main/resources/ne-en-bio-genetag.HmmChunker");
 
@@ -44,7 +44,6 @@ public class GeneEntityOne extends JCasAnnotator_ImplBase {
       //get result from chunk    
      sentence sTag = (sentence)it.next();     
      try {     
-      int start, end;
       String text=sTag.getContent();
       char[] textarray= text.toCharArray();
       
@@ -57,12 +56,14 @@ public class GeneEntityOne extends JCasAnnotator_ImplBase {
         //get result form chunk
         Chunk cc = chunkit.next();
         double conf = Math.pow(2.0,cc.score());
-        
+        if(conf>0.6)
+        {
         //assign results to the gene
         startpoint=text.substring(0, cc.start()).replaceAll("\\s", "").length();
         //whitespace-excluded offsets are calculated only until cas consumer
         endpoint=-1+text.substring(0, cc.end()).replaceAll("\\s", "").length();
         //System.out.println(start + " " + end);
+       // System.out.println(startpoint+" "+endpoint);
         
         GeneResult geneannotation= new GeneResult(aJCas);
         geneannotation.setStartPoint(startpoint);
@@ -74,6 +75,10 @@ public class GeneEntityOne extends JCasAnnotator_ImplBase {
         //System.out.println(sTag.getText().substring(chunkit.start(),chunkit.end()));
         //System.out.println(geneannotation.getId());
         geneannotation.addToIndexes();
+        }
+        else {
+          continue;
+        }
       }    
      }
      finally
