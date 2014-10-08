@@ -24,12 +24,7 @@ import org.apache.uima.resource.ResourceProcessException;
  */
 public class CasConsumer extends CasConsumer_ImplBase {
 
-  /**
-   * Output the result
-   * 
-   * @param CAS It provides access to the type system, to indexes, iterators and filters (constraints)
-   * @exception ResourceProcessException
-   */
+
 
   public void processCas(CAS arg0) throws ResourceProcessException {
     // TODO Auto-generated method stub
