@@ -22,7 +22,7 @@
         </collectionIterator>
     </collectionReader>
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">
-        <casProcessor deployment="integrated" name="GeneEntityOneDescriptor">
+        <casProcessor deployment="integrated" name="GeneEntityLingPipeDescriptor">
             <descriptor>
                 <import location="geneEntityLingPipeDescriptor.xml"/>
             </descriptor>
@@ -34,7 +34,7 @@
             </errorHandling>
             <checkpoint batch="10000" time="1000ms"/>
         </casProcessor>
-        <casProcessor deployment="integrated" name="geneEntityTwoDescriptor">
+        <casProcessor deployment="integrated" name="geneEntityAbnerDescriptor">
             <descriptor>
                 <import location="geneEntityAbnerDescriptor.xml"/>
             </descriptor>
@@ -46,7 +46,7 @@
             </errorHandling>
             <checkpoint batch="10000" time="1000ms"/>
         </casProcessor>
-        <casProcessor deployment="integrated" name="geneEntityThreeDescriptor">
+        <casProcessor deployment="integrated" name="geneEntityStanfordNLPDescriptor">
             <descriptor>
                 <import location="geneEntityStanfordNLPDescriptor.xml"/>
             </descriptor>
