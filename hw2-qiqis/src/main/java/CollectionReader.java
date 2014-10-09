@@ -11,6 +11,8 @@ import org.apache.uima.collection.CollectionReader_ImplBase;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
+
+import edu.cmu.deiis.types.sentence;
 /**
  *Read sentence from text line by line and pass the data to sentenceTag
  * <p> CollectionReader extends from CollectionReader_ImplBase 
@@ -22,6 +24,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
 
   BufferedReader reader = null;
   String tmp=null;
+  
 
   /**
    * Open FileReader of parameter.This is an override method

@@ -1,6 +1,6 @@
 
-
-/* First created by JCasGen Sat Oct 04 16:52:15 EDT 2014 */
+/* First created by JCasGen Thu Oct 09 12:49:04 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** the sentence data from the raw data
- * Updated by JCasGen Tue Oct 07 22:49:39 EDT 2014
+ * Updated by JCasGen Thu Oct 09 12:49:04 EDT 2014
  * @generated */
 public class sentence_Type extends Annotation_Type {
   /** @generated 
@@ -44,7 +44,7 @@ public class sentence_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("sentence");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.sentence");
  
   /** @generated */
   final Feature casFeat_id;
@@ -56,7 +56,7 @@ public class sentence_Type extends Annotation_Type {
    */ 
   public String getId(int addr) {
         if (featOkTst && casFeat_id == null)
-      jcas.throwFeatMissing("id", "sentence");
+      jcas.throwFeatMissing("id", "edu.cmu.deiis.types.sentence");
     return ll_cas.ll_getStringValue(addr, casFeatCode_id);
   }
   /** @generated
@@ -65,7 +65,7 @@ public class sentence_Type extends Annotation_Type {
    */    
   public void setId(int addr, String v) {
         if (featOkTst && casFeat_id == null)
-      jcas.throwFeatMissing("id", "sentence");
+      jcas.throwFeatMissing("id", "edu.cmu.deiis.types.sentence");
     ll_cas.ll_setStringValue(addr, casFeatCode_id, v);}
     
   
@@ -80,7 +80,7 @@ public class sentence_Type extends Annotation_Type {
    */ 
   public String getContent(int addr) {
         if (featOkTst && casFeat_content == null)
-      jcas.throwFeatMissing("content", "sentence");
+      jcas.throwFeatMissing("content", "edu.cmu.deiis.types.sentence");
     return ll_cas.ll_getStringValue(addr, casFeatCode_content);
   }
   /** @generated
@@ -89,7 +89,7 @@ public class sentence_Type extends Annotation_Type {
    */    
   public void setContent(int addr, String v) {
         if (featOkTst && casFeat_content == null)
-      jcas.throwFeatMissing("content", "sentence");
+      jcas.throwFeatMissing("content", "edu.cmu.deiis.types.sentence");
     ll_cas.ll_setStringValue(addr, casFeatCode_content, v);}
     
   

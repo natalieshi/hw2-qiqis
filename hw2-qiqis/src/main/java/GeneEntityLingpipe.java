@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Iterator;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
@@ -14,8 +15,11 @@ import com.aliasi.chunk.Chunking;
 import com.aliasi.chunk.ConfidenceChunker;
 import com.aliasi.util.AbstractExternalizable;
 
+import edu.cmu.deiis.types.GeneResult;
+import edu.cmu.deiis.types.sentence;
 
-public class GeneEntityOne extends JCasAnnotator_ImplBase {
+
+public class GeneEntityLingpipe extends JCasAnnotator_ImplBase {
 
   public static final int MAX_N_BEST_CHUNKS=30000;
   @Override
@@ -24,12 +28,11 @@ public class GeneEntityOne extends JCasAnnotator_ImplBase {
     int startpoint,endpoint;
     //System.out.println("here3");
     FSIterator<Annotation> it = aJCas.getAnnotationIndex(sentence.type).iterator();
-    File f=new File("src/main/resources/ne-en-bio-genetag.HmmChunker");
-
+    
     // load a trained model  
     ConfidenceChunker chunker = null;
     try {
-      chunker = (ConfidenceChunker) AbstractExternalizable.readObject(f);
+      chunker = (ConfidenceChunker) AbstractExternalizable.readResourceObject("/ne-en-bio-genetag.HmmChunker");
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();

@@ -1,5 +1,6 @@
 
-/* First created by JCasGen Sat Oct 04 21:28:16 EDT 2014 */
+/* First created by JCasGen Thu Oct 09 12:48:39 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,10 +12,8 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
-import edu.cmu.deiis.types.Annotation_Type;
-
 /** the GeneResult for the first annotator
- * Updated by JCasGen Tue Oct 07 22:49:39 EDT 2014
+ * Updated by JCasGen Thu Oct 09 12:49:04 EDT 2014
  * @generated */
 public class GeneResult_Type extends Annotation_Type {
   /** @generated 
@@ -44,7 +43,7 @@ public class GeneResult_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("GeneResult");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.GeneResult");
  
   /** @generated */
   final Feature casFeat_id;
@@ -56,7 +55,7 @@ public class GeneResult_Type extends Annotation_Type {
    */ 
   public String getId(int addr) {
         if (featOkTst && casFeat_id == null)
-      jcas.throwFeatMissing("id", "GeneResult");
+      jcas.throwFeatMissing("id", "edu.cmu.deiis.types.GeneResult");
     return ll_cas.ll_getStringValue(addr, casFeatCode_id);
   }
   /** @generated
@@ -65,7 +64,7 @@ public class GeneResult_Type extends Annotation_Type {
    */    
   public void setId(int addr, String v) {
         if (featOkTst && casFeat_id == null)
-      jcas.throwFeatMissing("id", "GeneResult");
+      jcas.throwFeatMissing("id", "edu.cmu.deiis.types.GeneResult");
     ll_cas.ll_setStringValue(addr, casFeatCode_id, v);}
     
   
@@ -80,7 +79,7 @@ public class GeneResult_Type extends Annotation_Type {
    */ 
   public int getStartPoint(int addr) {
         if (featOkTst && casFeat_startPoint == null)
-      jcas.throwFeatMissing("startPoint", "GeneResult");
+      jcas.throwFeatMissing("startPoint", "edu.cmu.deiis.types.GeneResult");
     return ll_cas.ll_getIntValue(addr, casFeatCode_startPoint);
   }
   /** @generated
@@ -89,7 +88,7 @@ public class GeneResult_Type extends Annotation_Type {
    */    
   public void setStartPoint(int addr, int v) {
         if (featOkTst && casFeat_startPoint == null)
-      jcas.throwFeatMissing("startPoint", "GeneResult");
+      jcas.throwFeatMissing("startPoint", "edu.cmu.deiis.types.GeneResult");
     ll_cas.ll_setIntValue(addr, casFeatCode_startPoint, v);}
     
   
@@ -104,7 +103,7 @@ public class GeneResult_Type extends Annotation_Type {
    */ 
   public int getEndPoint(int addr) {
         if (featOkTst && casFeat_endPoint == null)
-      jcas.throwFeatMissing("endPoint", "GeneResult");
+      jcas.throwFeatMissing("endPoint", "edu.cmu.deiis.types.GeneResult");
     return ll_cas.ll_getIntValue(addr, casFeatCode_endPoint);
   }
   /** @generated
@@ -113,7 +112,7 @@ public class GeneResult_Type extends Annotation_Type {
    */    
   public void setEndPoint(int addr, int v) {
         if (featOkTst && casFeat_endPoint == null)
-      jcas.throwFeatMissing("endPoint", "GeneResult");
+      jcas.throwFeatMissing("endPoint", "edu.cmu.deiis.types.GeneResult");
     ll_cas.ll_setIntValue(addr, casFeatCode_endPoint, v);}
     
   
@@ -128,7 +127,7 @@ public class GeneResult_Type extends Annotation_Type {
    */ 
   public String getGeneName(int addr) {
         if (featOkTst && casFeat_geneName == null)
-      jcas.throwFeatMissing("geneName", "GeneResult");
+      jcas.throwFeatMissing("geneName", "edu.cmu.deiis.types.GeneResult");
     return ll_cas.ll_getStringValue(addr, casFeatCode_geneName);
   }
   /** @generated
@@ -137,7 +136,7 @@ public class GeneResult_Type extends Annotation_Type {
    */    
   public void setGeneName(int addr, String v) {
         if (featOkTst && casFeat_geneName == null)
-      jcas.throwFeatMissing("geneName", "GeneResult");
+      jcas.throwFeatMissing("geneName", "edu.cmu.deiis.types.GeneResult");
     ll_cas.ll_setStringValue(addr, casFeatCode_geneName, v);}
     
   

@@ -1,5 +1,7 @@
 import java.io.BufferedReader;
+
 import edu.cmu.deiis.types.*;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -37,7 +39,7 @@ public class CasConsumer extends CasConsumer_ImplBase {
     HashSet<String> s=new HashSet<String>(); 
     BufferedReader br=null;
     try {
-      br=new BufferedReader(new FileReader("src/main/resources/inputData/sample.out"));
+      br=new BufferedReader(new FileReader("src/main/resources/sampleData/sample.out"));
       tmpt=br.readLine();
      while(tmpt!=null)
      {

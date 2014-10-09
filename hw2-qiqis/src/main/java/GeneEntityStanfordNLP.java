@@ -7,7 +7,10 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 
-public class GeneEntityThree extends JCasAnnotator_ImplBase {
+import edu.cmu.deiis.types.GeneResult;
+import edu.cmu.deiis.types.sentence;
+
+public class GeneEntityStanfordNLP extends JCasAnnotator_ImplBase {
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {

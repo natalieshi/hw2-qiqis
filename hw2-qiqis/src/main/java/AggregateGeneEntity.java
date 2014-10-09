@@ -7,6 +7,9 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 
+import edu.cmu.deiis.types.GeneResult;
+import edu.cmu.deiis.types.finalResult;
+
 
 public class AggregateGeneEntity extends JCasAnnotator_ImplBase {
 

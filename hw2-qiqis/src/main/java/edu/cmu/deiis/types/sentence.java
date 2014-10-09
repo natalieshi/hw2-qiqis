@@ -1,15 +1,17 @@
 
 
-/* First created by JCasGen Sat Oct 04 16:52:15 EDT 2014 */
+/* First created by JCasGen Thu Oct 09 12:49:04 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
+
 import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** the sentence data from the raw data
- * Updated by JCasGen Tue Oct 07 22:49:39 EDT 2014
+ * Updated by JCasGen Thu Oct 09 12:49:04 EDT 2014
  * XML source: /Users/shiqiqi/git/hw2-qiqis/hw2-qiqis/src/main/resources/descriptors/geneEntity_types.xml
  * @generated */
 public class sentence extends Annotation {
@@ -83,7 +85,7 @@ public class sentence extends Annotation {
    */
   public String getId() {
     if (sentence_Type.featOkTst && ((sentence_Type)jcasType).casFeat_id == null)
-      jcasType.jcas.throwFeatMissing("id", "sentence");
+      jcasType.jcas.throwFeatMissing("id", "edu.cmu.deiis.types.sentence");
     return jcasType.ll_cas.ll_getStringValue(addr, ((sentence_Type)jcasType).casFeatCode_id);}
     
   /** setter for id - sets the string for the sentence 
@@ -92,7 +94,7 @@ public class sentence extends Annotation {
    */
   public void setId(String v) {
     if (sentence_Type.featOkTst && ((sentence_Type)jcasType).casFeat_id == null)
-      jcasType.jcas.throwFeatMissing("id", "sentence");
+      jcasType.jcas.throwFeatMissing("id", "edu.cmu.deiis.types.sentence");
     jcasType.ll_cas.ll_setStringValue(addr, ((sentence_Type)jcasType).casFeatCode_id, v);}    
    
     
@@ -105,7 +107,7 @@ public class sentence extends Annotation {
    */
   public String getContent() {
     if (sentence_Type.featOkTst && ((sentence_Type)jcasType).casFeat_content == null)
-      jcasType.jcas.throwFeatMissing("content", "sentence");
+      jcasType.jcas.throwFeatMissing("content", "edu.cmu.deiis.types.sentence");
     return jcasType.ll_cas.ll_getStringValue(addr, ((sentence_Type)jcasType).casFeatCode_content);}
     
   /** setter for content - sets the content of the sentence 
@@ -114,7 +116,7 @@ public class sentence extends Annotation {
    */
   public void setContent(String v) {
     if (sentence_Type.featOkTst && ((sentence_Type)jcasType).casFeat_content == null)
-      jcasType.jcas.throwFeatMissing("content", "sentence");
+      jcasType.jcas.throwFeatMissing("content", "edu.cmu.deiis.types.sentence");
     jcasType.ll_cas.ll_setStringValue(addr, ((sentence_Type)jcasType).casFeatCode_content, v);}    
   }
 

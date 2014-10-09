@@ -1,16 +1,16 @@
 
 
-/* First created by JCasGen Sat Oct 04 21:28:16 EDT 2014 */
+/* First created by JCasGen Thu Oct 09 12:48:39 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-import edu.cmu.deiis.types.Annotation;
 
 
 /** the GeneResult for the first annotator
- * Updated by JCasGen Tue Oct 07 22:49:39 EDT 2014
+ * Updated by JCasGen Thu Oct 09 12:49:04 EDT 2014
  * XML source: /Users/shiqiqi/git/hw2-qiqis/hw2-qiqis/src/main/resources/descriptors/geneEntity_types.xml
  * @generated */
 public class GeneResult extends Annotation {
@@ -84,7 +84,7 @@ public class GeneResult extends Annotation {
    */
   public String getId() {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_id == null)
-      jcasType.jcas.throwFeatMissing("id", "GeneResult");
+      jcasType.jcas.throwFeatMissing("id", "edu.cmu.deiis.types.GeneResult");
     return jcasType.ll_cas.ll_getStringValue(addr, ((GeneResult_Type)jcasType).casFeatCode_id);}
     
   /** setter for id - sets the id for the gene 
@@ -93,7 +93,7 @@ public class GeneResult extends Annotation {
    */
   public void setId(String v) {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_id == null)
-      jcasType.jcas.throwFeatMissing("id", "GeneResult");
+      jcasType.jcas.throwFeatMissing("id", "edu.cmu.deiis.types.GeneResult");
     jcasType.ll_cas.ll_setStringValue(addr, ((GeneResult_Type)jcasType).casFeatCode_id, v);}    
    
     
@@ -106,7 +106,7 @@ public class GeneResult extends Annotation {
    */
   public int getStartPoint() {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_startPoint == null)
-      jcasType.jcas.throwFeatMissing("startPoint", "GeneResult");
+      jcasType.jcas.throwFeatMissing("startPoint", "edu.cmu.deiis.types.GeneResult");
     return jcasType.ll_cas.ll_getIntValue(addr, ((GeneResult_Type)jcasType).casFeatCode_startPoint);}
     
   /** setter for startPoint - sets the startPoint of gene 
@@ -115,7 +115,7 @@ public class GeneResult extends Annotation {
    */
   public void setStartPoint(int v) {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_startPoint == null)
-      jcasType.jcas.throwFeatMissing("startPoint", "GeneResult");
+      jcasType.jcas.throwFeatMissing("startPoint", "edu.cmu.deiis.types.GeneResult");
     jcasType.ll_cas.ll_setIntValue(addr, ((GeneResult_Type)jcasType).casFeatCode_startPoint, v);}    
    
     
@@ -128,7 +128,7 @@ public class GeneResult extends Annotation {
    */
   public int getEndPoint() {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_endPoint == null)
-      jcasType.jcas.throwFeatMissing("endPoint", "GeneResult");
+      jcasType.jcas.throwFeatMissing("endPoint", "edu.cmu.deiis.types.GeneResult");
     return jcasType.ll_cas.ll_getIntValue(addr, ((GeneResult_Type)jcasType).casFeatCode_endPoint);}
     
   /** setter for endPoint - sets the end point of gene 
@@ -137,7 +137,7 @@ public class GeneResult extends Annotation {
    */
   public void setEndPoint(int v) {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_endPoint == null)
-      jcasType.jcas.throwFeatMissing("endPoint", "GeneResult");
+      jcasType.jcas.throwFeatMissing("endPoint", "edu.cmu.deiis.types.GeneResult");
     jcasType.ll_cas.ll_setIntValue(addr, ((GeneResult_Type)jcasType).casFeatCode_endPoint, v);}    
    
     
@@ -150,7 +150,7 @@ public class GeneResult extends Annotation {
    */
   public String getGeneName() {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_geneName == null)
-      jcasType.jcas.throwFeatMissing("geneName", "GeneResult");
+      jcasType.jcas.throwFeatMissing("geneName", "edu.cmu.deiis.types.GeneResult");
     return jcasType.ll_cas.ll_getStringValue(addr, ((GeneResult_Type)jcasType).casFeatCode_geneName);}
     
   /** setter for geneName - sets the name for the gene 
@@ -159,7 +159,7 @@ public class GeneResult extends Annotation {
    */
   public void setGeneName(String v) {
     if (GeneResult_Type.featOkTst && ((GeneResult_Type)jcasType).casFeat_geneName == null)
-      jcasType.jcas.throwFeatMissing("geneName", "GeneResult");
+      jcasType.jcas.throwFeatMissing("geneName", "edu.cmu.deiis.types.GeneResult");
     jcasType.ll_cas.ll_setStringValue(addr, ((GeneResult_Type)jcasType).casFeatCode_geneName, v);}    
   }
 

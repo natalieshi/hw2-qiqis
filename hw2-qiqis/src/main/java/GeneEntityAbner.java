@@ -9,9 +9,11 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.springframework.scripting.support.StaticScriptSource;
 
+import edu.cmu.deiis.types.GeneResult;
+import edu.cmu.deiis.types.sentence;
 import abner.Tagger;
 
-public class GeneEntityTwo extends JCasAnnotator_ImplBase {
+public class GeneEntityAbner extends JCasAnnotator_ImplBase {
   
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {

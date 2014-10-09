@@ -1,6 +1,7 @@
 
 
-/* First created by JCasGen Tue Oct 07 19:21:23 EDT 2014 */
+/* First created by JCasGen Thu Oct 09 12:48:39 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -10,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** the finalResult of the system
- * Updated by JCasGen Tue Oct 07 22:49:39 EDT 2014
+ * Updated by JCasGen Thu Oct 09 12:49:04 EDT 2014
  * XML source: /Users/shiqiqi/git/hw2-qiqis/hw2-qiqis/src/main/resources/descriptors/geneEntity_types.xml
  * @generated */
 public class finalResult extends Annotation {
@@ -84,7 +85,7 @@ public class finalResult extends Annotation {
    */
   public String getFinalResult() {
     if (finalResult_Type.featOkTst && ((finalResult_Type)jcasType).casFeat_finalResult == null)
-      jcasType.jcas.throwFeatMissing("finalResult", "finalResult");
+      jcasType.jcas.throwFeatMissing("finalResult", "edu.cmu.deiis.types.finalResult");
     return jcasType.ll_cas.ll_getStringValue(addr, ((finalResult_Type)jcasType).casFeatCode_finalResult);}
     
   /** setter for finalResult - sets the finalResult info 
@@ -93,7 +94,7 @@ public class finalResult extends Annotation {
    */
   public void setFinalResult(String v) {
     if (finalResult_Type.featOkTst && ((finalResult_Type)jcasType).casFeat_finalResult == null)
-      jcasType.jcas.throwFeatMissing("finalResult", "finalResult");
+      jcasType.jcas.throwFeatMissing("finalResult", "edu.cmu.deiis.types.finalResult");
     jcasType.ll_cas.ll_setStringValue(addr, ((finalResult_Type)jcasType).casFeatCode_finalResult, v);}    
   }
 

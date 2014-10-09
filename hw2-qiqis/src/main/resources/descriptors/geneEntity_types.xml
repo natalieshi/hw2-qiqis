@@ -81,7 +81,7 @@
       </features>
     </typeDescription>
   <typeDescription>
-      <name>GeneResult</name>
+      <name>edu.cmu.deiis.types.GeneResult</name>
       <description>the GeneResult for the first annotator</description>
       <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
       <features>
@@ -108,7 +108,7 @@
       </features>
     </typeDescription>
     <typeDescription>
-      <name>sentence</name>
+      <name>edu.cmu.deiis.types.sentence</name>
       <description>the sentence data from the raw data</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
@@ -125,7 +125,7 @@
       </features>
     </typeDescription>
   <typeDescription>
-      <name>finalResult</name>
+      <name>edu.cmu.deiis.types.finalResult</name>
       <description>the finalResult of the system</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>

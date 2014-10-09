@@ -1,5 +1,6 @@
 
-/* First created by JCasGen Tue Oct 07 19:21:23 EDT 2014 */
+/* First created by JCasGen Thu Oct 09 12:48:39 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -13,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** the finalResult of the system
- * Updated by JCasGen Tue Oct 07 22:49:39 EDT 2014
+ * Updated by JCasGen Thu Oct 09 12:49:04 EDT 2014
  * @generated */
 public class finalResult_Type extends Annotation_Type {
   /** @generated 
@@ -43,7 +44,7 @@ public class finalResult_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("finalResult");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.finalResult");
  
   /** @generated */
   final Feature casFeat_finalResult;
@@ -55,7 +56,7 @@ public class finalResult_Type extends Annotation_Type {
    */ 
   public String getFinalResult(int addr) {
         if (featOkTst && casFeat_finalResult == null)
-      jcas.throwFeatMissing("finalResult", "finalResult");
+      jcas.throwFeatMissing("finalResult", "edu.cmu.deiis.types.finalResult");
     return ll_cas.ll_getStringValue(addr, casFeatCode_finalResult);
   }
   /** @generated
@@ -64,7 +65,7 @@ public class finalResult_Type extends Annotation_Type {
    */    
   public void setFinalResult(int addr, String v) {
         if (featOkTst && casFeat_finalResult == null)
-      jcas.throwFeatMissing("finalResult", "finalResult");
+      jcas.throwFeatMissing("finalResult", "edu.cmu.deiis.types.finalResult");
     ll_cas.ll_setStringValue(addr, casFeatCode_finalResult, v);}
     
   
