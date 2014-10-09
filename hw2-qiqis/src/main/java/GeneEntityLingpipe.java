@@ -32,7 +32,7 @@ public class GeneEntityLingpipe extends JCasAnnotator_ImplBase {
     // load a trained model  
     ConfidenceChunker chunker = null;
     try {
-      chunker = (ConfidenceChunker) AbstractExternalizable.readResourceObject("/ne-en-bio-genetag.HmmChunker");
+      chunker = (ConfidenceChunker) AbstractExternalizable.readResourceObject(CollectionReader.modelFile);
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();

@@ -12,6 +12,12 @@
                         <string>hw2.in</string>
                     </value>
                 </nameValuePair>
+                <nameValuePair>
+                    <name>modelFile</name>
+                    <value>
+                        <string>/ne-en-bio-genetag.HmmChunker</string>
+                    </value>
+                </nameValuePair>
             </configurationParameterSettings>
         </collectionIterator>
     </collectionReader>

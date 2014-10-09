@@ -39,8 +39,8 @@ public class CasConsumer extends CasConsumer_ImplBase {
     HashSet<String> s=new HashSet<String>(); 
     BufferedReader br=null;
     try {
-      br=new BufferedReader(new FileReader("src/main/resources/sampleData/sample.out"));
-      tmpt=br.readLine();
+     // br=new BufferedReader(new FileReader("src/main/resources/sampleData/sample.out"));
+       tmpt=br.readLine();
      while(tmpt!=null)
      {
        s.add(tmpt);

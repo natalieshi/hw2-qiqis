@@ -24,6 +24,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
 
   BufferedReader reader = null;
   String tmp=null;
+  public static String modelFile=null;
   
 
   /**
@@ -34,6 +35,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
     try {
       //proper use of configuration parameters instead of hard-wired model/file path
       String FilePath= (String) getConfigParameterValue("InputFile");
+      modelFile= (String) getConfigParameterValue("modelFile");
       System.out.println("here");
       reader = new BufferedReader(new FileReader(FilePath));
     } catch (FileNotFoundException e) {
