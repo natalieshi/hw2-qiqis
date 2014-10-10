@@ -13,13 +13,15 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 
 import edu.cmu.deiis.types.sentence;
+
+
 /**
- *Read sentence from text line by line and pass the data to sentenceTag
+ * Read sentence from text line by line and pass the data to sentenceTag
  * <p> CollectionReader extends from CollectionReader_ImplBase 
  * because it must implement the org.apache.uima.collection.CollectionReader interface
  * @author shiqiqi
+ *
  */
-
 public class CollectionReader extends CollectionReader_ImplBase {
 
   BufferedReader reader = null;
@@ -43,8 +45,9 @@ public class CollectionReader extends CollectionReader_ImplBase {
       e.printStackTrace();
     }
   }
+  
   /**
-   * Read data from sources line by line 
+   * * Read data from sources line by line 
    * new one sentenceTag for each line and pass it to CAS
    * This is an override method
    * @param CAS It provides access to the type system, to indexes, iterators and filters (constraints).
@@ -74,6 +77,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
     System.out.println("finish");
 }
   
+
   /**
    * Judge whether there are more line to be read. 
    * This is an override method
@@ -82,7 +86,6 @@ public class CollectionReader extends CollectionReader_ImplBase {
    * @throws IOException, CollectionException
    */
   public boolean hasNext() throws IOException, CollectionException {
-    // TODO Auto-generated method stub
     tmp=reader.readLine();//line-by-line collection reader
     if(tmp==null) return false;
     return true;

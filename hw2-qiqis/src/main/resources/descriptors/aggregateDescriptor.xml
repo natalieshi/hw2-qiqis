@@ -2,7 +2,21 @@
 
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>AggregateGeneEntity</annotatorImplementationName>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="geneEntityLingPipeDescriptor">
+      <import name="descriptors.geneEntityLingPipeDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="geneEntityAbnerDescriptor">
+      <import name="descriptors.geneEntityAbnerDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="geneEntityStanfordNLPDescriptor">
+      <import name="descriptors.geneEntityStanfordNLPDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="mergeGeneEntityDescriptor">
+      <import name="descriptors.mergeGeneEntityDescriptor"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>aggregateDescriptor</name>
     <description/>
@@ -10,21 +24,19 @@
     <vendor/>
     <configurationParameters/>
     <configurationParameterSettings/>
-    <typeSystemDescription>
-      <imports>
-        <import name="descriptors.geneEntity_types"/>
-      </imports>
-    </typeSystemDescription>
-    <typePriorities/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>geneEntityLingPipeDescriptor</node>
+        <node>geneEntityAbnerDescriptor</node>
+        <node>geneEntityStanfordNLPDescriptor</node>
+        <node>mergeGeneEntityDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs>
-          <type allAnnotatorFeatures="true">GeneResult</type>
-        </inputs>
-        <outputs>
-          <type allAnnotatorFeatures="true">finalResult</type>
-        </outputs>
+        <inputs/>
+        <outputs/>
         <languagesSupported/>
       </capability>
     </capabilities>

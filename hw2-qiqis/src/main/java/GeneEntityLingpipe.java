@@ -19,15 +19,28 @@ import edu.cmu.deiis.types.GeneResult;
 import edu.cmu.deiis.types.sentence;
 
 
+/**
+ * Get the text of a sentence from sentence
+ * Find the GeneEntity by using LingPipe
+ * Store the result in GeneResult
+ * @generated
+ * @author shiqiqi
+ *
+ */
 public class GeneEntityLingpipe extends JCasAnnotator_ImplBase {
 
+  /**
+   * Cope the data with LingPipe method.
+   * This is an override method
+   * @param CAS It provides access to the type system, to indexes, iterators and filters (constraints).
+   *         It also lets you create new annotations and other data structures
+   * @throws AnalysisEngineProcessException
+   */
   public static final int MAX_N_BEST_CHUNKS=30000;
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
-    // TODO Auto-generated method stub
-    int startpoint,endpoint;
-    //System.out.println("here3");
-    FSIterator<Annotation> it = aJCas.getAnnotationIndex(sentence.type).iterator();
+        int startpoint,endpoint;
+        FSIterator<Annotation> it = aJCas.getAnnotationIndex(sentence.type).iterator();
     
     // load a trained model  
     ConfidenceChunker chunker = null;
@@ -59,7 +72,7 @@ public class GeneEntityLingpipe extends JCasAnnotator_ImplBase {
         //get result form chunk
         Chunk cc = chunkit.next();
         double conf = Math.pow(2.0,cc.score());
-        if(conf>0.6)
+        if(conf>0.5)
         {
         //assign results to the gene
         startpoint=text.substring(0, cc.start()).replaceAll("\\s", "").length();

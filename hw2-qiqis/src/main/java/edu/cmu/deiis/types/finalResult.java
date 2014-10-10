@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** the finalResult of the system
- * Updated by JCasGen Thu Oct 09 12:49:04 EDT 2014
- * XML source: /Users/shiqiqi/git/hw2-qiqis/hw2-qiqis/src/main/resources/descriptors/geneEntity_types.xml
+ * Updated by JCasGen Fri Oct 10 12:32:52 EDT 2014
+ * XML source: /Users/shiqiqi/git/hw2-qiqis/hw2-qiqis/src/main/resources/descriptors/aggregateDescriptor.xml
  * @generated */
 public class finalResult extends Annotation {
   /** @generated

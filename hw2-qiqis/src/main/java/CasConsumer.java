@@ -20,96 +20,64 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceProcessException;
 
 /**
- * Output the final result and 
- * Evaluate the Result
+ * Output the final result
  *
  */
 public class CasConsumer extends CasConsumer_ImplBase {
-
-
-
+  /**
+   * Output the final result
+   * This is an override method
+   * @param CAS It provides access to the type system, to indexes, iterators and filters (constraints).
+   *         It also lets you create new annotations and other data structures
+   * @throws ResourceProcessException
+   */
   public void processCas(CAS arg0) throws ResourceProcessException {
     // TODO Auto-generated method stub
-   
+    
     File f= new File("hw2-qiqis.out");
     
-  //read info from sample.out
-    String tmpt;
-    int samplenumber = 0;
-    HashSet<String> s=new HashSet<String>(); 
-    BufferedReader br=null;
-    try {
-     // br=new BufferedReader(new FileReader("src/main/resources/sampleData/sample.out"));
-       tmpt=br.readLine();
-     while(tmpt!=null)
-     {
-       s.add(tmpt);
-       samplenumber++;
-       tmpt=br.readLine();
-     }
-    } catch (FileNotFoundException e2) {
-      // TODO Auto-generated catch block
-      e2.printStackTrace();
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    
-    
-    //write info to file
-    BufferedWriter bw = null;
-    try {
-      bw = new BufferedWriter(new FileWriter(f));
-    } catch (IOException e1) {
-      // TODO Auto-generated catch block
-      e1.printStackTrace();
-    }
-    JCas jcas = null;
-    try {
-      jcas = arg0.getJCas();
-    } catch (CASException e1) {
-      // TODO Auto-generated catch block
-      e1.printStackTrace();
-    }
-    
-    //the calculation of F-measure
-    int rightnumber=0;//the right number of geneTag
-    int totalrecognizenumber = 0;
-    String info=null;
-    FSIterator<Annotation> it = jcas.getAnnotationIndex(finalResult.type).iterator();
-    while(it.hasNext())
-    {
-      finalResult gt=(finalResult) it.next();
-      info=gt.getFinalResult();
-        totalrecognizenumber++;
-        try {
-          bw.write(info);
-          bw.newLine();
-        } catch (IOException e) {
-          // TODO Auto-generated catch block
-          e.printStackTrace();
-        }
+      //write info to file
+      BufferedWriter bw = null;
+      try {
+        bw = new BufferedWriter(new FileWriter(f));
+      } catch (IOException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+      }
+      
+      JCas jcas = null;
+      try {
+        jcas = arg0.getJCas();
+      } catch (CASException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+      }
+      
+      String info=null;
+      FSIterator<Annotation> it = jcas.getAnnotationIndex(finalResult.type).iterator();
+
+      while(it.hasNext())
+      {
+       finalResult gt=(finalResult) it.next();
        
-        if(s.contains(info))
-          rightnumber++;
-    }
-    try {
-      bw.close();
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    
-    //output evaluation info
+        info=gt.getFinalResult();
 
-    float precision=(float) (rightnumber*1.0/totalrecognizenumber*1.0);
-    float recall=(float)(rightnumber*1.0/samplenumber*1.0);
-    float F=(float) 2* precision*recall/(precision+recall);
-    System.out.println("precision="+precision);
-    System.out.println("recall="+recall);
-    System.out.println("F-measure="+F);
-    
-    
+          try {
+            bw.write(info);
+            bw.newLine();
+          } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+          }
+      }
+      
+      try {
+        bw.close();
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+
   }
+ }
 
-}
